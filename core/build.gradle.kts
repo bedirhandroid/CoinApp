@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.ksp)
+    alias(libs.plugins.android.hilt)
 }
 
 android {
@@ -37,7 +39,31 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(libs.androidx.viewbinding)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // AndroidX
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+
+    // Navigation Component
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+
+    // Hilt (KSP kullanarak)
+    implementation(libs.hilt.android)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    ksp(libs.hilt.ksp)
+
+    // Retrofit ve Gson
+    implementation(libs.retrofit)
+    implementation(libs.gson.converter)
+
+    // Coroutines
+    implementation(libs.coroutines.android)
+    implementation(libs.coroutines.core)
 }

@@ -1,7 +1,12 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.ksp)
+    alias(libs.plugins.android.hilt)
+    alias(libs.plugins.navigation.safeargs)
 }
 
 android {
@@ -16,6 +21,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -33,6 +39,11 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -61,16 +72,7 @@ dependencies {
     implementation(libs.coroutines.android)
     implementation(libs.coroutines.core)
 
-    // Unit Test
-    testImplementation(libs.junit)
-    testImplementation(libs.mockk)
-    testImplementation(libs.coroutines.test)
-    testImplementation(libs.turbine)
-    testImplementation(libs.truth)
-
-    // Android Test
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.test.runner)
-    androidTestImplementation(libs.coroutines.test)
+    implementation(project(":core"))
+    implementation(project(":network"))
+    implementation(project(":features"))
 }

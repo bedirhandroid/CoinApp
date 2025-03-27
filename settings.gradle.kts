@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "CoinApp"
 include(":app")
 include(":core")
+include(":network")
+include(":features")
