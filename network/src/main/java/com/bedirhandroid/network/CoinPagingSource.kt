@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.bedirhandroid.network.api.ApiService
-import com.bedirhandroid.network.model.Coin
+import com.bedirhandroid.network.model.data.Coin
 import com.bedirhandroid.network.util.SortOption
 import java.io.IOException
 

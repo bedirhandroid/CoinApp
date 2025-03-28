@@ -5,10 +5,9 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import androidx.paging.map
 import com.bedirhandroid.core.base.BaseViewModel
-import com.bedirhandroid.core.database.entity.CoinEntity
 import com.bedirhandroid.core.repository.CoinRepository
 import com.bedirhandroid.features.coinlist.ui.usecase.CoinListUseCase
-import com.bedirhandroid.network.model.CoinUiModel
+import com.bedirhandroid.network.model.ui.CoinUiModel
 import com.bedirhandroid.network.util.SortOption
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

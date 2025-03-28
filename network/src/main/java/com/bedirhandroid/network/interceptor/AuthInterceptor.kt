@@ -11,7 +11,7 @@ class AuthInterceptor : Interceptor {
         Log.d("qweqwe", "intercept: ${chain.request()}")
         val request = chain.request().newBuilder()
             .addHeader(NetworkConstants.HEADER_X_ACCESS_TOKEN, BuildConfig.API_KEY)
-            .addHeader("Content-Type", "application/json")
+            .addHeader(NetworkConstants.CONTENT_TYPE, "application/json")
             .build()
         return chain.proceed(request)
     }

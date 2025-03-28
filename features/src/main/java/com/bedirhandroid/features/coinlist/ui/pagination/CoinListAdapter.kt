@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bedirhandroid.core.util.loadImage
 import com.bedirhandroid.features.R
 import com.bedirhandroid.features.databinding.CoinItemBinding
-import com.bedirhandroid.network.model.CoinUiModel
+import com.bedirhandroid.network.model.ui.CoinUiModel
 
 class CoinListAdapter(
     private val onFavoriteClick: (CoinUiModel) -> Unit,

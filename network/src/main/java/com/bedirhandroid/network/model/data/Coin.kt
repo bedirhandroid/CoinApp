@@ -1,4 +1,4 @@
-package com.bedirhandroid.network.model
+package com.bedirhandroid.network.model.data
 
 import kotlinx.serialization.SerialName
 

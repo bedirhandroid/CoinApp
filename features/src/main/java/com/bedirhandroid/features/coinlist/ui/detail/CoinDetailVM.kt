@@ -3,7 +3,6 @@ package com.bedirhandroid.features.coinlist.ui.detail
 import androidx.lifecycle.viewModelScope
 import com.bedirhandroid.core.base.BaseViewModel
 import com.bedirhandroid.core.repository.CoinRepository
-import com.bedirhandroid.network.model.CoinUiModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

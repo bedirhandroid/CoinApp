@@ -1,4 +1,4 @@
-package com.bedirhandroid.network.model
+package com.bedirhandroid.network.model.data
 
 data class Stats(
     val total: Int,

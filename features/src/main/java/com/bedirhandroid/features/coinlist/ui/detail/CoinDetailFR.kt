@@ -2,13 +2,11 @@ package com.bedirhandroid.features.coinlist.ui.detail
 
 import android.graphics.Color
 import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.bedirhandroid.core.base.BaseFragment
 import com.bedirhandroid.core.util.navigateBack
-import com.bedirhandroid.features.R
 import com.bedirhandroid.features.databinding.CoinDetailBinding
-import com.bedirhandroid.network.model.CoinUiModel
+import com.bedirhandroid.network.model.ui.CoinUiModel
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry

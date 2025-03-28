@@ -1,4 +1,4 @@
-package com.bedirhandroid.network.model
+package com.bedirhandroid.network.model.ui
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

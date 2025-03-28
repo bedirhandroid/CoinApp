@@ -10,7 +10,7 @@ import com.bedirhandroid.core.util.navigateWithBundleTo
 import com.bedirhandroid.features.R
 import com.bedirhandroid.features.coinlist.ui.pagination.CoinListAdapter
 import com.bedirhandroid.features.databinding.FrCoinListBinding
-import com.bedirhandroid.network.model.CoinUiModel
+import com.bedirhandroid.network.model.ui.CoinUiModel
 import com.bedirhandroid.network.util.SortOption
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch

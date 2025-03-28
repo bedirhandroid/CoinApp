@@ -1,6 +1,6 @@
 package com.bedirhandroid.network.api
 
-import com.bedirhandroid.network.model.CoinResponse
+import com.bedirhandroid.network.model.data.CoinResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

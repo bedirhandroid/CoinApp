@@ -4,7 +4,7 @@ import androidx.paging.PagingData
 import androidx.paging.map
 import com.bedirhandroid.core.base.BaseFlowUseCase
 import com.bedirhandroid.core.repository.CoinRepository
-import com.bedirhandroid.network.model.CoinUiModel
+import com.bedirhandroid.network.model.ui.CoinUiModel
 import com.bedirhandroid.network.repository.Repository
 import com.bedirhandroid.network.util.SortOption
 import jakarta.inject.Inject

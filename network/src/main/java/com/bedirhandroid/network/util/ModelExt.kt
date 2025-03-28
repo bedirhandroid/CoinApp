@@ -1,8 +1,7 @@
 package com.bedirhandroid.network.util
 
-import com.bedirhandroid.core.repository.CoinRepository
-import com.bedirhandroid.network.model.Coin
-import com.bedirhandroid.network.model.CoinUiModel
+import com.bedirhandroid.network.model.data.Coin
+import com.bedirhandroid.network.model.ui.CoinUiModel
 
 fun Coin.toUiModel(favoriteIds: Set<String>): CoinUiModel {
     return CoinUiModel(
