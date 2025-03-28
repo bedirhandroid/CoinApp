@@ -75,7 +75,7 @@ class CoinDetailFR: BaseFragment<CoinDetailBinding,CoinDetailVM>() {
         val dataSet = LineDataSet(entries, getString(com.bedirhandroid.core.R.string.graph_title)).apply {
             color = Color.BLUE
             valueTextColor = Color.BLACK
-            lineWidth = 2f
+            lineWidth = 3f
             circleRadius = 4f
             setCircleColor(Color.RED)
         }
@@ -89,6 +89,11 @@ class CoinDetailFR: BaseFragment<CoinDetailBinding,CoinDetailVM>() {
 
         chart.axisRight.isEnabled = false
         chart.axisLeft.isEnabled = true
+        chart.setPinchZoom(true)
+        chart.isDragEnabled = true
+        chart.isScaleXEnabled = true
+        chart.isScaleYEnabled = true
+        chart.setScaleEnabled(true)
 
         chart.data = LineData(dataSet)
         chart.invalidate()
