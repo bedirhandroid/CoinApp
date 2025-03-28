@@ -57,7 +57,7 @@ dependencies {
     ksp(libs.hilt.ksp)
     implementation(libs.paging.runtime)
 
-    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation (libs.mpandroidchart)
 
     implementation(project(":core"))
     implementation(project(":network"))
