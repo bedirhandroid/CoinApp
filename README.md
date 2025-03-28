@@ -14,3 +14,7 @@ Used Tech.
 - Nav. Component
 - Room
 - Graph
+- DI (Hilt)
+- Glide with SVG
+- Pagination
+- 
