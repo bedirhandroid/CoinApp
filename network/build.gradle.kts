@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.android.hilt)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -72,4 +73,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     ksp(libs.hilt.ksp)
+    implementation(libs.paging.runtime)
+
+    implementation(project(":core"))
 }

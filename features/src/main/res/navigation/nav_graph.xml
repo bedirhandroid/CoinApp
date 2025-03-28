@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/coinListFR">
+
+
+    <fragment
+        android:id="@+id/coinListFR"
+        android:name="com.bedirhandroid.features.coinlist.ui.list.CoinListFR"
+        android:label="CoinListFR" >
+        <action
+            android:id="@+id/action_coinListFR_to_coinDetailFR"
+            app:destination="@id/coinDetailFR" />
+    </fragment>
+    <fragment
+        android:id="@+id/coinDetailFR"
+        android:name="com.bedirhandroid.features.coinlist.ui.detail.CoinDetailFR"
+        android:label="CoinDetailFR" />
+    <fragment
+        android:id="@+id/coinFavoriteFR"
+        android:name="com.bedirhandroid.features.coinlist.ui.favorite.CoinFavoriteFR"
+        android:label="CoinFavoriteFR" >
+        <action
+            android:id="@+id/action_coinFavoriteFR_to_coinDetailFR"
+            app:destination="@id/coinDetailFR" />
+    </fragment>
+</navigation>

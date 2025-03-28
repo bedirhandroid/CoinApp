@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.android.hilt)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -66,4 +67,11 @@ dependencies {
     // Coroutines
     implementation(libs.coroutines.android)
     implementation(libs.coroutines.core)
+
+    implementation(libs.glide)
+    ksp(libs.compiler)
+    implementation(libs.caverock.androidsvg)
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.ksp)
 }

@@ -11,14 +11,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:paddingBottom="8dp">
 
         <!-- Başlık -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ranking List"
+            android:text="Favori Coinler"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +33,7 @@
             app:cardCornerRadius="20dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent">
+
             <Spinner
                 android:id="@+id/spinnerSort"
                 android:layout_width="wrap_content"
@@ -42,18 +42,35 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:background="@android:color/holo_purple"
                 android:popupBackground="@android:color/white"
                 android:entries="@array/sort_options"/>
+
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Coin Listesi -->
+    <!-- Favori Coin Listesi -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewCoins"
+        android:id="@+id/rvFavorites"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         tools:listitem="@layout/coin_item"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSort"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Boş Görünüm -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEmptyFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Henüz favori eklenmedi."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sort_options">
+        <item>Price</item>
+        <item>Market Cap</item>
+        <item>24h Vol</item>
+        <item>Change %</item>
+        <item>Listing Date</item>
+    </string-array>
+</resources>

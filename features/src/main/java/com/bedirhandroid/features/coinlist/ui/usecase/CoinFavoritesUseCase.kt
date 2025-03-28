@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import java.util.Locale
 
-class CoinListUseCase @Inject constructor(
+class CoinFavoritesUseCase @Inject constructor(
     private val repo: Repository,
     private val roomRepo: CoinRepository
 ) :
