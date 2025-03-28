@@ -7,17 +7,15 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Üst Bilgi Alanı -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="8dp">
 
-        <!-- Başlık -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Favori Coinler"
+            tools:text="Favori Coinler"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +23,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/black" />
 
-        <!-- Sıralama Dropdown -->
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +45,6 @@
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Favori Coin Listesi -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFavorites"
         android:layout_width="match_parent"
@@ -59,12 +55,11 @@
         app:layout_constraintTop_toBottomOf="@id/spinnerSort"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <!-- Boş Görünüm -->
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvEmptyFavorites"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Henüz favori eklenmedi."
+        tools:text="Henüz favori eklenmedi."
         android:textSize="16sp"
         android:textStyle="bold"
         android:visibility="gone"

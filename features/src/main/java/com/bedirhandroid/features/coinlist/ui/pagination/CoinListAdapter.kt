@@ -40,8 +40,6 @@ class CoinListAdapter(
                     tvCoinPrice.text = price
                     tvCoinSymbol.text = symbol
                     tvCoinChange.text = "%$change (${changeAmount})"
-
-                    // Favori butonunun ikonunu güncelle
                     val favIconRes = if (isFavorite == true) {
                         com.bedirhandroid.core.R.drawable.ic_fav_filled
                     } else {

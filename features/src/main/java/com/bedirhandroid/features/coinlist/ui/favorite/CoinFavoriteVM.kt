@@ -28,7 +28,7 @@ class CoinFavoriteVM @Inject constructor(
     private val _favoriteCoins = MutableStateFlow<PagingData<CoinUiModel>>(PagingData.empty())
     val favoriteCoins: StateFlow<PagingData<CoinUiModel>> = _favoriteCoins.asStateFlow()
 
-    var currentSortOption: SortOption = SortOption.PRICE // Varsayılan sıralama
+    var currentSortOption: SortOption = SortOption.PRICE
 
     init {
         fetchFavoriteCoins(currentSortOption)

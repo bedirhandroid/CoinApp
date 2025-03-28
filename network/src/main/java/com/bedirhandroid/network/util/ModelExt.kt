@@ -4,7 +4,6 @@ import com.bedirhandroid.core.repository.CoinRepository
 import com.bedirhandroid.network.model.Coin
 import com.bedirhandroid.network.model.CoinUiModel
 
-// 🔹 Extension sadece dönüşüm işlemi yapıyor, bağımlılığı yönetmiyor
 fun Coin.toUiModel(favoriteIds: Set<String>): CoinUiModel {
     return CoinUiModel(
         id = this.uuid,
@@ -13,7 +12,7 @@ fun Coin.toUiModel(favoriteIds: Set<String>): CoinUiModel {
         price = this.price,
         marketCap = this.marketCap,
         change = this.change,
-        isFavorite = favoriteIds.contains(this.uuid), // **Favori olup olmadığını parametreden alıyor**
+        isFavorite = favoriteIds.contains(this.uuid),
         perDayPrice = this.perDayPrice,
         btcPrice = this.btcPrice,
         color = this.color,

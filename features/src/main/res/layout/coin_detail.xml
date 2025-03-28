@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Geri Butonu -->
     <ImageView
         android:id="@+id/btnBack"
         android:layout_width="24dp"
@@ -22,7 +21,7 @@
         android:id="@+id/tvSymbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BTC"
+        tools:text="BTC"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,7 +31,6 @@
         android:layout_marginTop="16dp" />
 
 
-    <!-- Favori Butonu -->
     <ImageView
         android:id="@+id/btnFavorite"
         android:layout_width="24dp"
@@ -43,15 +41,13 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp" />
 
-    <!-- Coin Sembolü -->
 
 
-    <!-- Coin Adı -->
     <TextView
         android:id="@+id/tvCoinName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bitcoin"
+        tools:text="Bitcoin"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/tvSymbol"
@@ -59,12 +55,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="12dp" />
 
-    <!-- "Current Price" Yazısı -->
     <TextView
         android:id="@+id/tvCurrentPriceLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CURRENT PRICE"
+        tools:text="CURRENT PRICE"
         android:textSize="12sp"
         android:textStyle="bold"
         android:textColor="@android:color/darker_gray"
@@ -72,36 +67,33 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Güncel Fiyat -->
     <TextView
         android:id="@+id/tvCurrentPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$62,809.80"
+        tools:text="$62,809.80"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/tvCurrentPriceLabel"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="4dp" />
 
-    <!-- Yüzdelik Değişim -->
     <TextView
         android:id="@+id/tvChangeRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+5.15% (+$3065.17)"
+        tools:text="+5.15% (+$3065.17)"
         android:textSize="14sp"
         android:textColor="@color/green"
         app:layout_constraintTop_toBottomOf="@id/tvCurrentPrice"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="4dp" />
 
-    <!-- High Değeri -->
     <TextView
         android:id="@+id/tvHighLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="High:"
+        tools:text="High:"
         android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
@@ -113,18 +105,17 @@
         android:id="@+id/tvHighValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="62,903.21"
+        tools:text="62,903.21"
         android:textSize="14sp"
         android:textColor="@color/green"
         app:layout_constraintTop_toTopOf="@id/tvCurrentPrice"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Low Değeri -->
     <TextView
         android:id="@+id/tvLowLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Low:"
+        tools:text="Low:"
         android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
@@ -136,7 +127,7 @@
         android:id="@+id/tvLowValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="59,213.19"
+        tools:text="59,213.19"
         android:textSize="14sp"
         android:textColor="@color/red"
         app:layout_constraintTop_toBottomOf="@id/tvHighValue"

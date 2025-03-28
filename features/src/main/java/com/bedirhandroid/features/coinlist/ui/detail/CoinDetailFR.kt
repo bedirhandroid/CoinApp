@@ -55,19 +55,13 @@ class CoinDetailFR: BaseFragment<CoinDetailBinding,CoinDetailVM>() {
     private fun toggleFavorite() {
         coin?.let {
             val isNowFavorite = !(it.isFavorite ?: false)
-
-            // Yeni favori durumunu güncelle
             val updatedCoin = it.copy(isFavorite = isNowFavorite)
             coin = updatedCoin
-
-            // ViewModel üzerinden favori işlemleri
             if (isNowFavorite) {
                 updatedCoin.id?.let { it1 -> viewModel.addFavorite(it1) }
             } else {
                 viewModel.removeFavorite(updatedCoin.id ?: "")
             }
-
-            // UI Güncelle
             updateFavoriteUI(isNowFavorite)
         }
     }

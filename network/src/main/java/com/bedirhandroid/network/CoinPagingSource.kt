@@ -16,7 +16,7 @@ class CoinPagingSource (
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Coin> {
         val page = params.key ?: 0
-        val limit = 50 // API'nin belirlediği limit
+        val limit = 50
         val offset = page * limit
 
         Log.d("qweqwe", "sortOptions: ${sortOption.apiValue}")

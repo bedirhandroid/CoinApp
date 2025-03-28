@@ -11,7 +11,6 @@ import com.bedirhandroid.core.R
 
 private const val TAG = "ProgressBar"
 
-// Progress Bar for BaseFragment
 class ProgressBar : DialogFragment() {
 
     private var isShown: Boolean = false

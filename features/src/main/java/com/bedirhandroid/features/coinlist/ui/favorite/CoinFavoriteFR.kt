@@ -63,7 +63,6 @@ class CoinFavoriteFR : BaseFragment<CoinFavoriteBinding, CoinFavoriteVM>() {
     private fun observeFavoriteCoins() {
         lifecycleScope.launch {
             viewModel.favoriteCoins.collectLatest { pagingData ->
-                //binding.tvEmptyFavorites.isVisible = pagingData.isEmpty()
                 favoriteAdapter.submitData(pagingData)
             }
         }

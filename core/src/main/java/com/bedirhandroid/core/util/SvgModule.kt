@@ -17,6 +17,5 @@ class SvgModule : AppGlideModule() {
             .append(InputStream::class.java, SVG::class.java, SvgDecoder())
     }
 
-    // Disable manifest parsing to avoid adding similar modules twice.
     override fun isManifestParsingEnabled() = false
 }

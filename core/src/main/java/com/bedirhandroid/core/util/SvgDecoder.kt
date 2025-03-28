@@ -15,7 +15,6 @@ class SvgDecoder : ResourceDecoder<InputStream, SVG> {
     @Throws(IOException::class)
     override fun decode(source: InputStream, width: Int, height: Int, options: Options): Resource<SVG>? {
         return try {
-            // this is the implementation from lib v4.10 working w/o issues in RecyclerView
             val svg = SVG.getFromInputStream(source)
             SimpleResource(svg)
         } catch (ex: SVGParseException) {

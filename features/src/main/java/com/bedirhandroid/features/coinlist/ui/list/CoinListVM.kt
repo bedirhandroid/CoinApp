@@ -24,7 +24,7 @@ class CoinListVM @Inject constructor(
     private val coinRepository: CoinRepository
 ) : BaseViewModel() {
 
-    private var currentSortOption: SortOption = SortOption.PRICE // Varsayılan sıralama
+    private var currentSortOption: SortOption = SortOption.PRICE
 
     private val _coinList = MutableStateFlow<PagingData<CoinUiModel>>(PagingData.empty())
     val coinList: StateFlow<PagingData<CoinUiModel>> = _coinList.asStateFlow()
