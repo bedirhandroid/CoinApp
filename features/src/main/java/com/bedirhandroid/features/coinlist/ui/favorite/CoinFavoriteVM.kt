@@ -65,9 +65,4 @@ class CoinFavoriteVM @Inject constructor(
             fetchFavoriteCoins(sortOption)
         }
     }
-    fun CoinUiModel.toEntity(): CoinEntity {
-        return CoinEntity(
-            id = this.id!!
-        )
-    }
 }

@@ -33,7 +33,7 @@ class CoinDetailFR: BaseFragment<CoinDetailBinding,CoinDetailVM>() {
             tvLowValue.text = "$${coin?.lowPrice}" ?: "N/A"
             updateFavoriteUI(coin?.isFavorite ?: false)
         }
-        setupChart(binding.chart, coin?.sparkline!!)
+        coin?.sparkline?.let { setupChart(binding.chart, it) }
     }
 
     override fun initListeners() {
@@ -62,7 +62,7 @@ class CoinDetailFR: BaseFragment<CoinDetailBinding,CoinDetailVM>() {
 
             // ViewModel üzerinden favori işlemleri
             if (isNowFavorite) {
-                viewModel.addFavorite(updatedCoin.id!!)
+                updatedCoin.id?.let { it1 -> viewModel.addFavorite(it1) }
             } else {
                 viewModel.removeFavorite(updatedCoin.id ?: "")
             }

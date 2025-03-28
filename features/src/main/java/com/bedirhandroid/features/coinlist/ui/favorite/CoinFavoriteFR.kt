@@ -27,7 +27,7 @@ class CoinFavoriteFR : BaseFragment<CoinFavoriteBinding, CoinFavoriteVM>() {
 
     private fun setupRecyclerView() {
         favoriteAdapter = CoinListAdapter(
-            onFavoriteClick = { toggleFavorite(it.id!!)},
+            onFavoriteClick = { it.id?.let { it1 -> toggleFavorite(it1) } },
             onItemClickListener = ::navigateToDetail
         )
         binding.rvFavorites.apply {
