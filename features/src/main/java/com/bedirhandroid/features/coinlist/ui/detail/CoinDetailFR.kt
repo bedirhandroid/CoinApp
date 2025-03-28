@@ -86,16 +86,17 @@ class CoinDetailFR: BaseFragment<CoinDetailBinding,CoinDetailVM>() {
             labelCount = 25
             granularity = 1f
         }
-
-        chart.axisRight.isEnabled = false
-        chart.axisLeft.isEnabled = true
-        chart.setPinchZoom(true)
-        chart.isDragEnabled = true
-        chart.isScaleXEnabled = true
-        chart.isScaleYEnabled = true
-        chart.setScaleEnabled(true)
-
-        chart.data = LineData(dataSet)
+        chart.apply {
+            axisRight.isEnabled = false
+            axisLeft.isEnabled = true
+            setPinchZoom(true)
+            isDragEnabled = true
+            isScaleXEnabled = true
+            isScaleYEnabled = true
+            setScaleEnabled(true)
+            description.isEnabled = false
+            data = LineData(dataSet)
+        }
         chart.invalidate()
     }
 
