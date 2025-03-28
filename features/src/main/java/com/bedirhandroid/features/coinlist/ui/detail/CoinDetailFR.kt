@@ -5,6 +5,7 @@ import android.os.Build
 import androidx.core.content.ContextCompat
 import com.bedirhandroid.core.base.BaseFragment
 import com.bedirhandroid.core.util.navigateBack
+import com.bedirhandroid.features.R
 import com.bedirhandroid.features.databinding.CoinDetailBinding
 import com.bedirhandroid.network.model.ui.CoinUiModel
 import com.github.mikephil.charting.charts.LineChart
@@ -71,7 +72,7 @@ class CoinDetailFR: BaseFragment<CoinDetailBinding,CoinDetailVM>() {
             Entry(index.toFloat(), value)
         }
 
-        val dataSet = LineDataSet(entries, "Veri Grafiği").apply {
+        val dataSet = LineDataSet(entries, getString(com.bedirhandroid.core.R.string.graph_title)).apply {
             color = Color.BLUE
             valueTextColor = Color.BLACK
             lineWidth = 2f
@@ -88,9 +89,6 @@ class CoinDetailFR: BaseFragment<CoinDetailBinding,CoinDetailVM>() {
 
         chart.axisRight.isEnabled = false
         chart.axisLeft.isEnabled = true
-
-        chart.data = LineData(dataSet)
-        chart.invalidate()
 
         chart.data = LineData(dataSet)
         chart.invalidate()

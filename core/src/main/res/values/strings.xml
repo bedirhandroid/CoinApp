@@ -4,4 +4,5 @@
     <string name="start_with_usd">$%1$s</string>
     <string name="ranking_list_title">Ranking List</string>
     <string name="fav_list_title">Favorites Coins</string>
+    <string name="graph_title">Veri Grafiği</string>
 </resources>
