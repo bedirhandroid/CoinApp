@@ -27,10 +27,10 @@ class CoinDetailFR: BaseFragment<CoinDetailBinding,CoinDetailVM>() {
         binding.apply {
             tvSymbol.text = coin?.symbol ?: "N/A"
             tvCoinName.text = coin?.name ?: "N/A"
-            tvCurrentPrice.text = "$${coin?.price ?: "0.00"}"
-            tvChangeRate.text = "%${coin?.change} (${coin?.changeAmount})"
-            tvHighValue.text = "$${coin?.highPrice}" ?: "N/A"
-            tvLowValue.text = "$${coin?.lowPrice}" ?: "N/A"
+            tvCurrentPrice.text = getString(com.bedirhandroid.core.R.string.start_with_usd,coin?.price)
+            tvChangeRate.text = getString(com.bedirhandroid.core.R.string.coin_change,coin?.change,coin?.changeAmount)
+            tvHighValue.text = getString(com.bedirhandroid.core.R.string.start_with_usd, coin?.highPrice)
+            tvLowValue.text = getString(com.bedirhandroid.core.R.string.start_with_usd, coin?.lowPrice)
             updateFavoriteUI(coin?.isFavorite ?: false)
         }
         coin?.sparkline?.let { setupChart(binding.chart, it) }

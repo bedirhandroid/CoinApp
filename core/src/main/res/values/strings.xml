@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="coin_change">%% %1$s ($%2$s)</string>
+    <string name="start_with_usd">$%1$s</string>
+</resources>

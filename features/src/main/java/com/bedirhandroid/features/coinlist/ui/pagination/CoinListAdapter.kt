@@ -39,7 +39,7 @@ class CoinListAdapter(
                     tvCoinName.text = name
                     tvCoinPrice.text = price
                     tvCoinSymbol.text = symbol
-                    tvCoinChange.text = "%$change (${changeAmount})"
+                    tvCoinChange.text = adapterContext.getString(com.bedirhandroid.core.R.string.coin_change,change,changeAmount)
                     val favIconRes = if (isFavorite == true) {
                         com.bedirhandroid.core.R.drawable.ic_fav_filled
                     } else {

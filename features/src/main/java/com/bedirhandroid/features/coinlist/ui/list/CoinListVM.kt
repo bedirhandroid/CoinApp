@@ -41,7 +41,7 @@ class CoinListVM @Inject constructor(
 
     fun toggleFavorite(coin: CoinUiModel) {
         viewModelScope.launch {
-            val updatedCoin = coin.copy(isFavorite = !coin.isFavorite)
+            val updatedCoin = coin.copy(isFavorite = !coin.isFavorite!!)
 
             if (updatedCoin.isFavorite == true) {
                 coin.id?.let {
